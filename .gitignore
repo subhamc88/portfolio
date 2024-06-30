@@ -1,0 +1,27 @@
+# Ignore Next.js build output
+/.next/
+
+# Ignore development server logs
+*.log
+
+# Ignore environment variables file
+.env
+
+# Ignore Node.js modules
+node_modules/
+
+# Ignore IDE/Editor specific files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+
+# Ignore npm debug log
+npm-debug.log*
+
+# Ignore Yarn integrity file
+.yarn-integrity
+
+# Ignore macOS file system metadata
+.DS_Store
+
