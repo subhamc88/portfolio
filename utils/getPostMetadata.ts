@@ -6,16 +6,16 @@ export default function getPostMetadata(filePath: string[]) {
 	const postMetadataCollection = []
 
 	for (let file of filePath) {
-		const { data: frontmatter, content } = matter.read(file)
+		const { data } = matter.read(file)
 		const postMetadata: postMetadataInterface = {
-			title: frontmatter.title,
-			date: frontmatter.date,
-			author: frontmatter.author,
-			category: frontmatter.category,
-			tags: frontmatter.tags,
-			description: frontmatter.description,
-			draft: frontmatter.draft,
-			image: frontmatter.image,
+			title: data.title,
+			date: data.date,
+			author: data.author,
+			category: data.category,
+			tags: data.tags,
+			description: data.description,
+			draft: data.draft,
+			image: data.image,
 		}
 		postMetadataCollection.push(postMetadata);
 	}
