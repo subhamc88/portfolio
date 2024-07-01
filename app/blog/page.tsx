@@ -13,7 +13,7 @@ export default function Blog() {
 			<h1>This is the blog page</h1>
 			{metadata.map((metadata) => (
 				<li key={metadata.title}>
-					<Link href={"/blog/posts/" + metadata.title}>
+					<Link href={"/blog/" + metadata.title}>
 						{metadata.title}
 					</Link>
 				</li>
