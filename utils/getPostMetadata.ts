@@ -2,7 +2,6 @@ import matter from "gray-matter";
 import postMetadataInterface from "./postMetadataInterface";
 
 export default function getPostMetadata(filePath: string[]) {
-	console.log(filePath);
 	const postMetadataCollection = []
 
 	for (let file of filePath) {
