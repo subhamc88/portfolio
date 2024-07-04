@@ -3,15 +3,16 @@
     "lib": [
       "dom",
       "dom.iterable",
-      "esnext",
-      "es6"
+      "es6",
+      "es2015",
+      "es2017"
     ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
     "noEmit": true,
     "incremental": true,
-    "module": "esnext",
+    "module": "commonjs",
     "esModuleInterop": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
@@ -33,3 +34,4 @@
     "node_modules"
   ]
 }
+
