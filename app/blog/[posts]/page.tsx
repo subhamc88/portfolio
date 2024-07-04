@@ -7,7 +7,7 @@ import getFilePath from '../../../utils/getFilePath'
 const postDir = path.join(process.cwd(), '/posts');
 const filePath = getFilePath(postDir);
 
-export async function generateStaticParams() {
+export const generateStaticParams = () => {
 	const metadata = getPostMetadata(filePath);
 
 	const postsLinks = metadata.map((posts) => (posts.title))
