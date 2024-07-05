@@ -9,10 +9,7 @@ const postDir = path.join(process.cwd(), '/posts');
 export async function generateStaticParams() {
 	const filePath = getFilePath(postDir);
 	const metadata = getPostMetadata(filePath);
-
-	const postsLinks = metadata.map((post) => ({
-		params: { posts: post.title },
-	}))
+	const postsLinks = metadata.map((post) => ({ posts: post.title }))
 	return postsLinks
 }
 
