@@ -16,7 +16,9 @@ export default function getPostMetadata(filePath: string[]) {
 			draft: data.draft,
 			image: data.image,
 		}
-		postMetadataCollection.push(postMetadata);
+		if (data.draft == false) {
+			postMetadataCollection.push(postMetadata);
+		}
 	}
 	return postMetadataCollection;
 }
