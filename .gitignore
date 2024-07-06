@@ -1,27 +1,49 @@
-# Ignore Next.js build output
-/.next/
-
-# Ignore development server logs
-*.log
-
-# Ignore environment variables file
-.env
-
-# Ignore Node.js modules
+# Node modules
 node_modules/
 
-# Ignore IDE/Editor specific files
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+
+# Build directories
+.next/
+out/
+
+# Test directories
+coverage/
+__test__/coverage/
+
+# Tailwind CSS generated files
+tailwind.output.css
+
+# dotenv environment variables file
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Miscellaneous
+.DS_Store
+*.pem
+*.env
+
+# IDE specific files
 .vscode/
 .idea/
-*.suo
-*.ntvs*
 
-# Ignore npm debug log
-npm-debug.log*
+# Ignored file types
+*.swp
+*.swo
+*.bak
+*.tmp
 
-# Ignore Yarn integrity file
-.yarn-integrity
-
-# Ignore macOS file system metadata
-.DS_Store
-
+# Ignore compiled TypeScript files
+dist/
+*.tsbuildinfo
