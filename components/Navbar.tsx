@@ -16,7 +16,7 @@ export default function Navbar() {
 
 	return (
 		<nav
-			className="fixed bottom-0 w-full sm:relative sm:top-0 sm:h-14 p-2"
+			className="absolute bottom-0 w-screen sm:relative sm:top-0 sm:h-14 p-2 z-50"
 			role="navigation"
 			aria-label="Main Navigation"
 		>
