@@ -1,8 +1,8 @@
 "use client"
-import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHouseChimneyWindow, faCodeFork, faUserNinja, faBookOpen } from "@fortawesome/free-solid-svg-icons";
-import { usePathname } from "next/navigation";
+import Link from "next/link"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faHouseChimneyWindow, faCodeFork, faUserNinja, faBookOpen } from "@fortawesome/free-solid-svg-icons"
+import { usePathname } from "next/navigation"
 
 export default function Navbar() {
 	const iconList = [
@@ -10,9 +10,9 @@ export default function Navbar() {
 		{ name: 'Projects', icon: faCodeFork, path: "/projects" },
 		{ name: 'Blog', icon: faBookOpen, path: "/blog" },
 		{ name: 'Profile', icon: faUserNinja, path: '/profile' }
-	];
+	]
 
-	const currentPath = usePathname();
+	const currentPath = usePathname()
 
 	return (
 		<nav
@@ -34,5 +34,5 @@ export default function Navbar() {
 				))}
 			</ul>
 		</nav>
-	);
+	)
 }
