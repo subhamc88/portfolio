@@ -16,7 +16,7 @@ export default function Navbar() {
 
 	return (
 		<nav
-			className="absolute bottom-0 w-screen sm:relative sm:top-0 sm:h-14 p-2 z-50"
+			className="fixed bottom-0 w-screen sm:relative sm:top-0 sm:h-14 p-2 z-50"
 			role="navigation"
 			aria-label="Main Navigation"
 		>
@@ -26,7 +26,7 @@ export default function Navbar() {
 						<Link href={item.path}>
 							<FontAwesomeIcon
 								icon={item.icon}
-								className={`h-6 w-6 transition-colors duration-150 ${currentPath === item.path ? "text-blue-500" : "text-gray-500"}`}
+								className={`h-6 w-6 transition-colors duration-150 ${currentPath === item.path ? "text-cyan-700" : "text-gray-500"}`}
 							/>
 							<span className="hidden sm:inline">{item.name}</span>
 						</Link>

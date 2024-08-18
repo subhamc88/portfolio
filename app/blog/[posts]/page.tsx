@@ -27,6 +27,6 @@ export default async function Posts({ params }: { params: { posts: string } }) {
 	const contentHtml = marked(content);
 
 	return (
-		<div dangerouslySetInnerHTML={{ __html: contentHtml }} />
+		<div dangerouslySetInnerHTML={{ __html: contentHtml }} className="overflow-y-scroll h-screen" />
 	);
 }

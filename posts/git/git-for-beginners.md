@@ -8,7 +8,7 @@ tags:
     - vcs
     - version control
 description: "A comprehensive guide to Git for beginners, covering basic concepts and commands."
-image: "posts/images/git-beginner.jpg"
+image: "images/git-beginner.jpg"
 draft: false
 ---
 
