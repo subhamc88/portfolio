@@ -8,6 +8,7 @@ export default function getPostMetadata(filePath: string[]) {
 		const { data } = matter.read(file)
 		const postMetadata: postMetadataInterface = {
 			title: data.title,
+			slug: data.slug,
 			date: data.date,
 			author: data.author,
 			category: data.category,
