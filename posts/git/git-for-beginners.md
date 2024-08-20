@@ -1,5 +1,6 @@
 ---
-title: "git-for-beginners"
+title: "Git For Beginners"
+slug: "git-for-beginners"
 date: "2024-06-24"
 author: "subhamc88"
 category: "Git"
