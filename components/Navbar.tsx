@@ -20,13 +20,13 @@ export default function Navbar() {
 			role="navigation"
 			aria-label="Main Navigation"
 		>
-			<ul className="bg-gray-100 flex flex-row justify-around m-4 p-5 rounded-3xl">
+			<ul className="bg-redCandy-white flex flex-row justify-around m-4 p-5 rounded-3xl">
 				{iconList.map((item) => (
 					<li key={item.path} className="flex flex-col items-center">
 						<Link href={item.path}>
 							<FontAwesomeIcon
 								icon={item.icon}
-								className={`h-6 w-6 transition-colors duration-150 ${currentPath === item.path ? "text-cyan-700" : "text-gray-500"}`}
+								className={`h-6 w-6 transition-colors duration-150 ${currentPath === item.path ? "text-redCandy-red" : "text-redCandy-black"}`}
 							/>
 							<span className="hidden sm:inline">{item.name}</span>
 						</Link>
