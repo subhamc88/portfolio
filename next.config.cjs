@@ -1,4 +1,5 @@
-module.exports = {
-	reactStrictMode: true,
-	output: 'export',
-}
+const nextConfig = {
+  output: "export",
+};
+
+module.exports = nextConfig;
