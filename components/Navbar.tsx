@@ -25,7 +25,7 @@ export default function Navbar() {
 				role="navigation"
 				aria-label="Mobile/Tablet Navigation"
 			>
-				<ul className="bg-gray-100/80 backdrop-blur-md flex justify-around py-3 px-5 rounded-3xl shadow-lg">
+				<ul className="bg-gray-100/80 backdrop-blur-md flex justify-around py-3 px-5 rounded-2xl shadow-lg">
 					{iconList.map((item) => (
 						<li key={item.path} className="flex flex-col items-center">
 							<Link href={item.path}>
