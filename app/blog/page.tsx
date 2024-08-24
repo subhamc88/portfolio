@@ -11,33 +11,29 @@ export default function Blog() {
 
 	return (
 		<div className="text-redCandy-black container mx-auto p-4 flex flex-wrap justify-center items-center min-h-screen">
-			<h1 className="text-3xl font-bold text-redCandy-black mb-8 w-full text-center">
+			<h1 className="text-4xl font-bold text-redCandy-black w-full text-center mb-12">
 				Welcome to My Space
 			</h1>
-			<ul className="w-full flex flex-wrap justify-center">
+			<ul className="w-full flex flex-wrap justify-center gap-8">
 				{metadata.map((post) => (
 					<li
 						key={post.title}
-						className="relative m-4 w-80 h-48 rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105"
+						className="relative aspect-w-16 aspect-h-9 rounded-3xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
 					>
-						<Link href={`/blog/${post.title}`}>
-							<div className="flex flex-col justify-between h-full">
-								<div className="relative h-32">
-									<Image
-										src={`/${post.image}`}
-										alt={post.title}
-										layout="fill"
-										objectFit="cover"
-										className="rounded-t-lg"
-									/>
-								</div>
-								<div className="p-4 flex-1">
-									<h2 className="text-lg font-bold text-redCandy-black">
-										{post.title}
-									</h2>
-								</div>
-								<div className="absolute top-0 left-0 w-full h-full bg-redCandy-black bg-opacity-80 opacity-0 hover:opacity-100 flex justify-center items-center p-4 text-redCandy-white text-center">
-									<p>{post.description}</p>
+						<Link href={`/blog/${post.slug}`}>
+							<Image
+								src={`/${post.image}`}
+								alt={post.title}
+								width={320}
+								height={180}
+							/>
+							<div className="p-4 flex flex-col h-full bg-white rounded-b-3xl z-40">
+								<h2 className="text-xl font-semibold text-redCandy-black mb-2 truncate">
+									{post.title}
+								</h2>
+								<span className="text-sm text-gray-600 mb-2">{post.date}</span>
+								<div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 hover:opacity-100 flex justify-center items-center p-4 text-white text-center transition-opacity duration-300 rounded-b-3xl">
+									<p className="text-sm">{post.description || 'No description available'}</p>
 								</div>
 							</div>
 						</Link>
