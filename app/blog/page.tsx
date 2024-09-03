@@ -8,7 +8,7 @@ export default function Blog() {
 	const postDir = path.join(process.cwd(), '/posts');
 	const filePath = getFilePath(postDir);
 	const metadata = getPostMetadata(filePath);
-	const publishedPosts = metadata.filter(post => post.draft);
+	const publishedPosts = metadata.filter(post => !post.draft);
 
 return (
     <div className="text-redCandy-black container mx-auto p-4 flex flex-wrap justify-center items-center min-h-screen">
@@ -23,7 +23,6 @@ return (
               className="relative aspect-w-16 aspect-h-9 rounded-3xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
             >
               <Link href={`/blog/${slug}`}>
-                <a>
                   <Image
                     src={`/${image}`}
                     alt={title}
@@ -39,7 +38,6 @@ return (
                       <p className="text-sm">{description || 'No description available'}</p>
                     </div>
                   </div>
-                </a>
               </Link>
             </li>
           ))
