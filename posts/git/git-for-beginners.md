@@ -10,7 +10,7 @@ tags:
     - version control
 description: "A comprehensive guide to Git for beginners, covering basic concepts and commands."
 image: "images/git-beginner.webp"
-draft: true
+draft: false
 ---
 
 
