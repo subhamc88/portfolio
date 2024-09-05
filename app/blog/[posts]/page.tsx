@@ -9,9 +9,13 @@ const postDir = path.join(process.cwd(), '/posts')
 const filePath = getFilePath(postDir)
 
 export async function generateStaticParams() {
-	const metadata = getPostMetadata(filePath)
-	const postsLinks = metadata.map((post) => ({ posts: post.slug }))
-	return postsLinks
+  const metadata = getPostMetadata(filePath)
+  const postsLinks = metadata.map((post) => ({
+    posts: post.slug
+  }))
+  return {
+    paths: postsLinks,
+  }
 }
 
 export default async function Posts(props: any) {
