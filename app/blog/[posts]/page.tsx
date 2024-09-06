@@ -9,10 +9,10 @@ const postDir = path.join(process.cwd(), '/posts')
 const filePath = getFilePath(postDir)
 
 export async function generateStaticParams() {
-  const metadata = getPostMetadata(filePath)
-  return metadata.map((post) => ({
-    posts: post.slug
-  }))
+	const metadata = getPostMetadata(filePath)
+	return metadata.map((post) => ({
+		posts: post.slug
+	}))
 }
 
 export default async function Posts(props: any) {
@@ -23,7 +23,7 @@ export default async function Posts(props: any) {
 			const { data, content } = matter.read(file)
 			const contentHtml = marked(content)
 			return (
-				<div className="bg-redCandy-white text-redCandy-black min-h-screen">
+				<div className="bg-catpuccin-bg text-catpuccin-dark-gray min-h-screen">
 					{data.image && (
 						<Image
 							src={`/${data.image}`}
@@ -36,7 +36,7 @@ export default async function Posts(props: any) {
 					<h1 className="text-3xl font-bold text-center z-50">{data.title}</h1>
 					<div
 						dangerouslySetInnerHTML={{ __html: contentHtml }}
-						className="prose lg:prose-xl bg-redCandy-white p-8 rounded-lg shadow-lg text-redCandy-black"
+						className="prose lg:prose-xl bg-catpuccin-bg p-8 rounded-lg shadow-lg text-catpuccin-dark-gray"
 					/>
 				</div>
 			)

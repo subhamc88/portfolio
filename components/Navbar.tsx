@@ -25,15 +25,15 @@ export default function Navbar() {
 				role="navigation"
 				aria-label="Mobile/Tablet Navigation"
 			>
-				<ul className="bg-gray-100/80 backdrop-blur-md flex justify-around py-3 px-5 rounded-2xl shadow-lg">
+				<ul className="bg-catpuccin-softGray-100/80 backdrop-blur-md flex justify-around py-3 px-5 rounded-2xl shadow-lg">
 					{iconList.map((item) => (
 						<li key={item.path} className="flex flex-col items-center">
 							<Link href={item.path}>
 								<FontAwesomeIcon
 									icon={item.icon}
-									className={`h-6 w-6 transition-colors duration-150 ${currentPath === item.path ? "text-redCandy-red" : "text-gray-500"}`}
+									className={`h-6 w-6 transition-colors duration-150 ${currentPath === item.path ? "text-catpuccin-red" : "text-catpuccin-darkGray"}`}
 								/>
-								<span className="hidden sm:inline text-gray-700">{item.name}</span>
+								<span className="hidden sm:inline text-catpuccin-softGray">{item.name}</span>
 							</Link>
 						</li>
 					))}
@@ -45,11 +45,11 @@ export default function Navbar() {
 					className="fixed top-4 left-4 z-50 p-2"
 					onClick={toggleSidebar}
 				>
-					<FontAwesomeIcon icon={sidebarOpen ? faTimes : faBars} className="h-6 w-6 text-gray-700" />
+					<FontAwesomeIcon icon={sidebarOpen ? faTimes : faBars} className="h-6 w-6 text-catpuccin-softGray" />
 				</button>
 
 				<aside
-					className={`fixed top-0 left-0 h-full w-64 bg-gray-100 shadow-lg transform ${sidebarOpen ? "translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out`}
+					className={`fixed top-0 left-0 h-full w-64 bg-catpuccin-softGray shadow-lg transform ${sidebarOpen ? "translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out`}
 					role="navigation"
 					aria-label="Desktop Sidebar Navigation"
 				>
@@ -59,9 +59,9 @@ export default function Navbar() {
 								<Link href={item.path} className="flex items-center space-x-3">
 									<FontAwesomeIcon
 										icon={item.icon}
-										className={`h-6 w-6 transition-colors duration-150 ${currentPath === item.path ? "text-redCandy-red" : "text-gray-700"}`}
+										className={`h-6 w-6 transition-colors duration-150 ${currentPath === item.path ? "text-catpuccinred" : "text-catpuccin-softGray"}`}
 									/>
-									<span className="text-gray-700">{item.name}</span>
+									<span className="text-catpuccin-softGray">{item.name}</span>
 								</Link>
 							</li>
 						))}
