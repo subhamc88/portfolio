@@ -11,7 +11,7 @@ export default function Blog() {
 	const publishedPosts = metadata.filter(post => !post.draft)
 
 return (
-    <div className="text-catpuccin-dark-gray container mx-auto p-4 flex flex-wrap justify-center items-center min-h-screen">
+    <div className="text-catpuccin-dark-gray bg-catpuccin-bg container mx-auto p-4 flex flex-wrap justify-center items-center min-h-screen">
       <h1 className="text-4xl font-bold text-catpuccin-dark-gray w-full text-center mb-12">
         Welcome to My Space
       </h1>
