@@ -3,7 +3,6 @@ import { marked } from 'marked'
 import matter from 'gray-matter'
 import getPostMetadata from '../../../utils/getPostMetadata'
 import getFilePath from '../../../utils/getFilePath'
-import Image from 'next/image'
 
 const postDir = path.join(process.cwd(), '/posts')
 const filePath = getFilePath(postDir)
@@ -25,13 +24,14 @@ export default async function Posts(props: any) {
 			return (
 				<div className="bg-catpuccin-bg text-catpuccin-dark-gray min-h-screen">
 					{data.image && (
-						<Image
-							src={`/${data.image}`}
-							alt={data.title}
-							width={1920}
-							height={1080}
-							className="shadow-md"
+						<img
+							src={`${image}`}
+							alt={title}
+							width={320}
+							height={180}
+							className="object-cover w-full h-full"
 						/>
+
 					)}
 					<h1 className="text-3xl font-bold text-center z-50">{data.title}</h1>
 					<div
