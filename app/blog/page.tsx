@@ -8,7 +8,6 @@ export default function Blog() {
 	const filePath = getFilePath(postDir)
 	const metadata = getPostMetadata(filePath)
 	const publishedPosts = metadata.filter(post => !post.draft)
-	console.log(publishedPosts)
 
 	return (
 		<div className="text-catpuccin-dark-gray bg-catpuccin-bg container mx-auto p-4 flex flex-wrap justify-center items-center min-h-screen">
@@ -28,16 +27,14 @@ export default function Blog() {
 									alt={title}
 									width={320}
 									height={180}
-									className="object-cover w-full h-full"
+									className="object-cover w-full h-48 rounded-t-3xl"
 								/>
 								<div className="p-4 flex flex-col h-full bg-catpuccin-bg rounded-b-3xl z-40">
 									<h2 className="text-xl font-semibold text-catpuccin-dark-gray mb-2 truncate">
 										{title}
 									</h2>
+									<p className="text-sm text-catpuccin-dark-gray mb-4 flex-grow">{description || 'No description available'}</p>
 									<span className="text-sm text-catpuccin-soft-gray mb-2">{date}</span>
-									<div className="absolute inset-0 bg-catpuccin-dark-gray bg-opacity-60 opacity-0 hover:opacity-100 flex justify-center items-center p-4 text-white text-center transition-opacity duration-300 rounded-b-3xl">
-										<p className="text-sm">{description || 'No description available'}</p>
-									</div>
 								</div>
 							</Link>
 						</li>
