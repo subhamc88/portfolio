@@ -25,8 +25,8 @@ export default async function Posts(props: any) {
 				<div className="bg-catpuccin-bg text-catpuccin-dark-gray min-h-screen">
 					{data.image && (
 						<img
-							src={`${image}`}
-							alt={title}
+							src={`${data.image}`}
+							alt={data.title}
 							width={320}
 							height={180}
 							className="object-cover w-full h-full"
