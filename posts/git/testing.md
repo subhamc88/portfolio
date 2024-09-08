@@ -4,6 +4,7 @@ slug: "testing"
 date: "2024-06-24"
 author: "subhamc88"
 category: "testing"
+description: "Lorem Ipsum is used for prototyping the website."
 tags:
 image: "images/git-beginner.webp"
 draft: false
