@@ -36,7 +36,7 @@ export default async function Posts(props: any) {
 					<h1 className="text-3xl font-bold text-center z-50">{data.title}</h1>
 					<div
 						dangerouslySetInnerHTML={{ __html: contentHtml }}
-						className="prose lg:prose-xl bg-catpuccin-bg p-8 rounded-lg shadow-lg text-catpuccin-dark-gray"
+						className="prose lg:prose-xl bg-catpuccin-bg p-8 text-catpuccin-dark-gray mb-28"
 					/>
 				</div>
 			)
