@@ -25,7 +25,7 @@ export default function Navbar() {
 				role="navigation"
 				aria-label="Mobile/Tablet Navigation"
 			>
-				<ul className="bg-catpuccin-softGray backdrop-blur-md flex justify-around w-full py-7 rounded-3xl">
+				<ul className="bg-catpuccin-softGray backdrop-blur-md flex justify-around w-full py-6 rounded-3xl">
 					{iconList.map((item) => (
 						<li key={item.path} className="flex flex-col items-center">
 							<Link href={item.path}>
@@ -49,7 +49,7 @@ export default function Navbar() {
 				</button>
 
 				<aside
-					className={`fixed top-0 left-0 h-full w-64 bg-catpuccin-softGray shadow-lg transform ${sidebarOpen ? "translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out`}
+					className={`fixed top-0 left-0 h-full w-64 bg-catpuccin-bg shadow-lg transform ${sidebarOpen ? "translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out`}
 					role="navigation"
 					aria-label="Desktop Sidebar Navigation"
 				>
